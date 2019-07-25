@@ -3,19 +3,15 @@ import { Scene, Router, Stack} from 'react-native-router-flux';
 import Login from '../components/Containers/boiler/Auth/Login';
 import { connect } from 'react-redux';
 
-const BoilerRouter = () => (
-        
-            <Stack key="boilerRoot" hideNavBar>
-                
-                <Scene
-                    key="login"
-                    title={'Login'}
-                    component={Login}
+class BoilerRouter extends Component {
+    
+    render(){
+        return (
+            
+                <Scene key="home" component={Login} />
+            
+        );
+    }
+}
 
-                />
-
-            </Stack>
-         
-);
-
-export {BoilerRouter};
+export default BoilerRouter;

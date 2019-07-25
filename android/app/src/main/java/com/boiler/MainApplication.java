@@ -3,6 +3,7 @@ package com.boiler;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.underscope.react.fbak.RNAccountKitPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
@@ -56,6 +57,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNAccountKitPackage(),
             new AsyncStoragePackage(),
             new RNDeviceInfo(),
             new RNCWebViewPackage(),

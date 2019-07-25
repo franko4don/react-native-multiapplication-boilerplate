@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
       android:name=".MainApplication"
@@ -23,7 +24,17 @@
       android:allowBackup="false"
       android:networkSecurityConfig="@xml/network_security_config"
       android:grantUriPermissions="true"
+      android:fullBackupContent="@xml/backup_config"
       android:theme="@style/AppTheme">
+      <meta-data
+        android:name="com.facebook.sdk.ApplicationId"
+        android:value="@string/fb_app_id" />
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ak_client_token" />
       <uses-library android:name="org.apache.http.legacy"
           android:required="false"/>
       <activity

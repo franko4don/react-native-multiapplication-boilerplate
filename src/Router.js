@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Scene, Router} from 'react-native-router-flux';
+import {View} from 'react-native';
+import { Scene, Router, Stack} from 'react-native-router-flux';
 import { connect } from 'react-redux';
-import { BoilerRouter } from './routers/BoilerRouter';
+import BoilerRouter from './routers/BoilerRouter';
+import Login from './components/Containers/boiler/Auth/Login';
 
 class RouterComponent extends Component {
 
@@ -12,15 +14,16 @@ class RouterComponent extends Component {
 
 
     render() {
-     
         return (
              
-            <Router> 
-                <Scene key="root">
-                    <BoilerRouter/>
-                </Scene>
-              
-            </Router>
+                <Router>     
+                    <Scene key="root" hideNavBar>
+                    <Scene key="home" component={Login} />
+                        
+                    </Scene>
+                </Router>
+                
+           
 
         );
     }
@@ -35,4 +38,4 @@ const mapStateToProps = (state) => {
     return {}
 };
 
-export default connect(mapStateToProps, {})(RouterComponent);
+export default RouterComponent;
