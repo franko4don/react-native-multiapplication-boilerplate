@@ -3,7 +3,13 @@ package com.boiler;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.RNFetchBlob.RNFetchBlobPackage;
+import com.react.rnspinkit.RNSpinkitPackage;
+import com.RNPlayAudio.RNPlayAudioPackage;
+import com.BV.LinearGradient.LinearGradientPackage;
+import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import io.underscope.react.fbak.RNAccountKitPackage;
+import com.goldenowl.twittersignin.TwitterSigninPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
@@ -17,7 +23,6 @@ import com.microsoft.appcenter.reactnative.analytics.AppCenterReactNativeAnalyti
 import com.microsoft.appcenter.reactnative.appcenter.AppCenterReactNativePackage;
 import cl.json.RNSharePackage;
 import co.apptailor.googlesignin.RNGoogleSigninPackage;
-import com.goldenowl.twittersignin.TwitterSigninPackage;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.entria.views.RNViewOverflowPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -57,7 +62,13 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNFetchBlobPackage(),
+            new RNSpinkitPackage(),
+            new RNPlayAudioPackage(),
+            new LinearGradientPackage(),
+            new PickerPackage(),
             new RNAccountKitPackage(),
+            new TwitterSigninPackage(),
             new AsyncStoragePackage(),
             new RNDeviceInfo(),
             new RNCWebViewPackage(),
@@ -71,7 +82,6 @@ public class MainApplication extends Application implements ReactApplication {
             new AppCenterReactNativePackage(MainApplication.this),
             new RNSharePackage(),
             new RNGoogleSigninPackage(),
-            new TwitterSigninPackage(),
             new FBSDKPackage(mCallbackManager),
             new RNViewOverflowPackage(),
             new VectorIconsPackage(),

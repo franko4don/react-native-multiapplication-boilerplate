@@ -28,10 +28,12 @@ class Login extends Component {
             initialPhoneNumber: '',
             initialPhoneCountryPrefix: '',
             getACallEnabled: true,
-            setEnableInitialSmsButton: true,
+            // setEnableInitialSmsButton: true,
             
           });
-          
+        //   this.loginWithAccountKit();
+        //   this.twitterSignIn();
+        this.handleFacebookLogin();
     }
 
     loginWithAccountKit(){

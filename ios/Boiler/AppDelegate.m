@@ -7,9 +7,10 @@
 
 #import "AppDelegate.h"
 #import <CodePush/CodePush.h>
+#import <AppCenterReactNative/AppCenterReactNative.h>
 #import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
 #import <AppCenterReactNativeAnalytics/AppCenterReactNativeAnalytics.h>
-#import <AppCenterReactNative/AppCenterReactNative.h>
+
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -52,7 +53,7 @@
   [self.window makeKeyAndVisible];
   [[FBSDKApplicationDelegate sharedInstance] application:application
     didFinishLaunchingWithOptions:launchOptions];
-  [[Twitter sharedInstance] startWithConsumerKey:@"9udRmTj7IROwD5ROGXiTfq3IX" consumerSecret:@"wqjYVpusYlLeCkJAUyzlVSEbqxRPdZ90qqFkKW3NPZU7hxDWNb"];
+  [[Twitter sharedInstance] startWithConsumerKey:@"oNsrfUbCyFOnOP1yPVMO3VwV1" consumerSecret:@"VSyBk6827Gc8Hp4LljNKe2nUirP9NIMgXqT83ukLKjO71Cka7p"];
   
   return YES;
 }

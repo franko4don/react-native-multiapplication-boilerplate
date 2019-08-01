@@ -159,7 +159,13 @@ android {
 }
 
 dependencies {
+    implementation project(':rn-fetch-blob')
+    implementation project(':react-native-spinkit')
+    implementation project(':react-native-play-audio')
+    implementation project(':react-native-linear-gradient')
+    implementation project(':react-native-image-crop-picker')
     implementation project(':react-native-facebook-account-kit')
+    implementation project(':react-native-twitter-signin')
     implementation project(':@react-native-community_async-storage')
     implementation project(':react-native-device-info')
     implementation project(':react-native-webview')
@@ -176,7 +182,6 @@ dependencies {
     implementation project(':appcenter')
     implementation project(':react-native-share')
     implementation project(':react-native-google-signin')
-    implementation project(':react-native-twitter-signin')
     implementation project(':react-native-fbsdk')
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
     implementation project(':react-native-view-overflow')
